@@ -3,12 +3,11 @@
 
 end = 0
 
-with open("f1.txt", "w") as f:
-    while end < 111:
+with open("f1.txt", "w", encoding="utf-8") as f:
+    while True:
         str = (input('Введите данные для записи в файл:  '))
         if len(str) == 0:
-            end = 112
+            break
 
-        end += 1
         f.write(str)
         f.write("\n")
